@@ -1,0 +1,51 @@
+<script>
+async function loadYahooNews() {
+    try {
+        const res = await fetch("https://www.yahoo.com/news/rss/finance");
+        const text = await res.text();
+
+        const parser = new DOMParser();
+        const xml = parser.parseFromString(text, "text/xml");
+
+        const items = [...xml.querySelectorAll("item")].slice(0, 6);
+
+        const container = document.getElementById("yahoo-news");
+
+        container.innerHTML = items.map(item => {
+            const title = item.querySelector("title")?.textContent || "Article";
+            const link = item.querySelector("link")?.textContent || "https://finance.yahoo.com/";
+            const desc = (item.querySelector("description")?.textContent || "")
+                .replace(/<[^>]+>/g, "")
+                .slice(0, 140) + "...";
+
+            return `
+                <div class="bg-[#050505] border border-white/[0.04] rounded-xl p-6 flex flex-col h-full hover:bg-white/[0.02] transition">
+                    <h3 class="text-lg font-medium text-white mb-3">
+                        ${title}
+                    </h3>
+
+                    <p class="text-sm text-gray-400 mb-6">
+                        ${desc}
+                    </p>
+
+                    <div class="mt-auto pt-4 border-t border-white/[0.04]">
+                        <p class="text-xs text-gray-500 uppercase tracking-widest mb-3">
+                            Source: Yahoo Finance
+                        </p>
+
+                        <a href="${link}" target="_blank"
+                           class="w-full bg-white/[0.03] hover:bg-white/[0.08] border border-white/[0.08] text-white text-sm py-2 px-4 rounded-lg flex items-center justify-center gap-2">
+                            Read on Yahoo →
+                        </a>
+                    </div>
+                </div>
+            `;
+        }).join("");
+
+    } catch (err) {
+        console.error("Yahoo load error", err);
+    }
+}
+
+loadYahooNews();
+</script>
