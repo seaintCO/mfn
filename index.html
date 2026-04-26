@@ -3,201 +3,196 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Miami Finance News | Miami Markets & Local Headlines</title>
+<title>Miami Finance News</title>
 
 <script src="https://cdn.tailwindcss.com"></script>
-<script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
 
 <style>
-body { background:#050505; color:white; }
-.glass {
-  background: rgba(255,255,255,0.025);
-  border: 1px solid rgba(255,255,255,0.06);
-  backdrop-filter: blur(14px);
+body {
+  background: #050505;
+  color: white;
 }
-.hover-card { transition: all .3s ease; }
+.glass {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.08);
+  backdrop-filter: blur(12px);
+}
+.hover-card {
+  transition: all 0.3s ease;
+}
 .hover-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 0 45px rgba(34,211,238,.12);
-  border-color: rgba(34,211,238,.28);
+  box-shadow: 0 0 40px rgba(34,211,238,0.1);
 }
 </style>
 </head>
 
-<body class="font-sans antialiased overflow-x-hidden">
+<body class="font-sans">
 
+<!-- NAVBAR -->
 <nav class="fixed top-0 w-full z-50 glass">
   <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-    <div class="flex items-center gap-2">
-      <div class="w-7 h-7 rounded bg-white/5 border border-white/10 flex items-center justify-center">
-        <iconify-icon icon="solar:global-linear" width="15"></iconify-icon>
-      </div>
-      <h1 class="font-semibold tracking-wide uppercase">Miami Finance News</h1>
-    </div>
+    <h1 class="font-semibold uppercase tracking-wide">
+      Miami Finance News
+    </h1>
 
-    <div class="hidden md:flex gap-7 text-sm text-gray-400">
+    <div class="hidden md:flex gap-6 text-sm text-gray-400">
       <a href="#latest" class="hover:text-white">Latest</a>
-      <a href="#yahoo" class="hover:text-white">Yahoo Finance</a>
-      <a href="#local10" class="hover:text-white">Miami News</a>
-      <a href="#markets" class="hover:text-white">Markets</a>
-      <a href="#submit" class="hover:text-white">Submit</a>
+      <a href="#yahoo" class="hover:text-white">Markets</a>
+      <a href="#local" class="hover:text-white">Miami News</a>
     </div>
   </div>
 </nav>
 
-<section class="pt-32 pb-20 text-center max-w-6xl mx-auto px-6">
-  <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 mb-6">
-    <span class="w-1.5 h-1.5 rounded-full bg-cyan-400"></span>
-    <span class="text-xs uppercase tracking-widest text-gray-300">Miami Markets • Local Headlines • Global Finance</span>
-  </div>
-
-  <h1 class="text-5xl md:text-7xl font-semibold leading-tight tracking-tight">
-    MIAMI FINANCE.<br />
-    LOCAL NEWS.<br />
-    <span class="text-gray-500">MARKET INTELLIGENCE.</span>
+<!-- HERO -->
+<section class="pt-32 pb-20 text-center max-w-5xl mx-auto px-6">
+  <h1 class="text-5xl md:text-7xl font-semibold leading-tight">
+    MIAMI FINANCE.<br>
+    LOCAL NEWS.<br>
+    <span class="text-gray-500">MARKET INTEL.</span>
   </h1>
 
-  <p class="mt-6 text-gray-400 max-w-2xl mx-auto">
-    A premium Miami news and finance portal featuring original stories, curated Yahoo Finance coverage, Local 10 Miami headlines, and live market data.
+  <p class="mt-6 text-gray-400">
+    Miami’s modern news platform for markets, founders, and local power moves.
   </p>
 </section>
 
-<section class="border-y border-white/[0.05] bg-[#0a0a0a] overflow-hidden">
-  <div class="max-w-7xl mx-auto px-6 py-3 flex gap-8 text-xs uppercase tracking-widest text-gray-400 overflow-x-auto">
-    <span>S&P 500 <b class="text-emerald-400">Live</b></span>
-    <span>NASDAQ <b class="text-emerald-400">Live</b></span>
-    <span>Miami Real Estate <b class="text-cyan-400">Watching</b></span>
-    <span>Rates <b class="text-gray-300">Macro</b></span>
-    <span>Local Business <b class="text-cyan-400">Miami</b></span>
-  </div>
-</section>
+<!-- FEATURED ARTICLE -->
+<section id="latest" class="max-w-7xl mx-auto px-6 mb-20">
+  <h2 class="text-2xl mb-6">Latest Story</h2>
 
-<section id="latest" class="max-w-7xl mx-auto px-6 py-20">
-  <h2 class="text-2xl font-semibold mb-6">Latest Story</h2>
+  <div class="grid md:grid-cols-2 glass rounded-xl overflow-hidden">
 
-  <div class="grid md:grid-cols-2 glass rounded-2xl overflow-hidden">
-    <div class="h-72 md:h-auto bg-[#080808] flex items-center justify-center border-r border-white/[0.05]">
-      <iconify-icon icon="solar:buildings-linear" class="text-white/10" width="72"></iconify-icon>
-    </div>
+    <!-- IMAGE -->
+    <a href="article-1.html" class="block overflow-hidden">
+      <img 
+        src="assets/azul-event.jpg" 
+        class="w-full h-full object-cover hover:opacity-90 transition"
+      />
+    </a>
 
+    <!-- TEXT -->
     <div class="p-10">
-      <p class="text-xs uppercase tracking-widest text-cyan-400 mb-4">Featured Original Story</p>
-      <h3 class="text-3xl font-semibold mb-4">Your Miami finance story goes here today</h3>
-      <p class="text-gray-400 mb-8">
-        Leave this section open for your original article. Add your headline, image, author, publish date, and full article body when ready.
+      <p class="text-xs uppercase tracking-widest text-cyan-400 mb-4">
+        Featured Coverage
       </p>
-      <button class="bg-white text-black px-6 py-3 rounded-lg text-sm font-semibold hover:bg-cyan-300">
-        Read Full Story
-      </button>
+
+      <a href="article-1.html">
+        <h3 class="text-3xl font-semibold mb-4 hover:text-cyan-300 transition">
+          Inside Azul: A $12.5B Founder Room Where Execution Defines Everything
+        </h3>
+      </a>
+
+      <p class="text-gray-400 mb-8">
+        An inside look at one of Miami’s most elite founder gatherings, where capital, execution, and intelligence defined the room.
+      </p>
+
+      <a href="article-1.html" class="bg-white text-black px-6 py-3 rounded-lg text-sm font-semibold hover:bg-cyan-300 inline-block">
+        Read Full Story →
+      </a>
     </div>
+
   </div>
 </section>
 
-<section id="yahoo" class="bg-[#0a0a0a] py-20 border-y border-white/[0.05]">
+<!-- YAHOO / MARKET LINKS -->
+<section id="yahoo" class="bg-[#0a0a0a] py-20 border-y border-white/10">
   <div class="max-w-7xl mx-auto px-6">
-    <h2 class="text-2xl font-semibold mb-8">Yahoo Finance Coverage</h2>
+
+    <h2 class="text-2xl mb-8">Market Coverage</h2>
 
     <div class="grid md:grid-cols-3 gap-6">
+
       <div class="glass p-6 rounded-xl hover-card">
-        <h3 class="text-lg font-medium mb-3">Latest Market News</h3>
-        <p class="text-sm text-gray-400 mb-6">View current finance headlines, market movers, stocks, and economic updates.</p>
-        <p class="text-xs text-gray-500 uppercase tracking-widest mb-3">Source: Yahoo Finance</p>
-        <a href="https://finance.yahoo.com/" target="_blank" class="block text-center bg-white/10 py-2 rounded-lg hover:bg-white/20">Read on Yahoo →</a>
+        <h3 class="text-lg mb-3">Latest Market News</h3>
+        <p class="text-gray-400 text-sm mb-6">
+          Real-time finance headlines, stocks, and market updates.
+        </p>
+        <a href="https://finance.yahoo.com/" target="_blank" class="block text-center bg-white/10 py-2 rounded-lg hover:bg-white/20">
+          Yahoo Finance →
+        </a>
       </div>
 
       <div class="glass p-6 rounded-xl hover-card">
-        <h3 class="text-lg font-medium mb-3">Stock Market Updates</h3>
-        <p class="text-sm text-gray-400 mb-6">Track stock market stories, earnings, investor updates, and market trends.</p>
-        <p class="text-xs text-gray-500 uppercase tracking-widest mb-3">Source: Yahoo Finance</p>
-        <a href="https://finance.yahoo.com/topic/stock-market-news/" target="_blank" class="block text-center bg-white/10 py-2 rounded-lg hover:bg-white/20">View Stocks →</a>
+        <h3 class="text-lg mb-3">Stock Market</h3>
+        <p class="text-gray-400 text-sm mb-6">
+          Earnings, stock movers, and investor insights.
+        </p>
+        <a href="https://finance.yahoo.com/topic/stock-market-news/" target="_blank" class="block text-center bg-white/10 py-2 rounded-lg hover:bg-white/20">
+          View Stocks →
+        </a>
       </div>
 
       <div class="glass p-6 rounded-xl hover-card">
-        <h3 class="text-lg font-medium mb-3">Economic News</h3>
-        <p class="text-sm text-gray-400 mb-6">Inflation, rates, macro policy, and global economy coverage.</p>
-        <p class="text-xs text-gray-500 uppercase tracking-widest mb-3">Source: Yahoo Finance</p>
-        <a href="https://finance.yahoo.com/topic/economic-news/" target="_blank" class="block text-center bg-white/10 py-2 rounded-lg hover:bg-white/20">Read Economy →</a>
+        <h3 class="text-lg mb-3">Economic News</h3>
+        <p class="text-gray-400 text-sm mb-6">
+          Inflation, rates, and macroeconomic trends.
+        </p>
+        <a href="https://finance.yahoo.com/topic/economic-news/" target="_blank" class="block text-center bg-white/10 py-2 rounded-lg hover:bg-white/20">
+          Economy →
+        </a>
       </div>
+
     </div>
   </div>
 </section>
 
-<section id="local10" class="max-w-7xl mx-auto px-6 py-20">
-  <h2 class="text-2xl font-semibold mb-8">Miami Headlines from Local 10</h2>
+<!-- MIAMI NEWS -->
+<section id="local" class="max-w-7xl mx-auto px-6 py-20">
+  <h2 class="text-2xl mb-8">Miami News</h2>
 
   <div class="grid md:grid-cols-3 gap-6">
+
     <div class="glass p-6 rounded-xl hover-card">
-      <h3 class="text-lg font-medium mb-3">Miami Local News</h3>
-      <p class="text-sm text-gray-400 mb-6">Breaking and developing stories around Miami, Fort Lauderdale, Broward, and South Florida.</p>
-      <p class="text-xs text-gray-500 uppercase tracking-widest mb-3">Source: Local 10</p>
-      <a href="https://www.local10.com/news/local/" target="_blank" class="block text-center bg-white/10 py-2 rounded-lg hover:bg-white/20">Read Local News →</a>
+      <h3 class="text-lg mb-3">Local Headlines</h3>
+      <p class="text-gray-400 text-sm mb-6">
+        Breaking Miami and South Florida news.
+      </p>
+      <a href="https://www.local10.com/news/local/" target="_blank" class="block text-center bg-white/10 py-2 rounded-lg hover:bg-white/20">
+        Local 10 →
+      </a>
     </div>
 
     <div class="glass p-6 rounded-xl hover-card">
-      <h3 class="text-lg font-medium mb-3">Business & Money</h3>
-      <p class="text-sm text-gray-400 mb-6">Local business, finance, consumer, and money-related stories affecting South Florida.</p>
-      <p class="text-xs text-gray-500 uppercase tracking-widest mb-3">Source: Local 10</p>
-      <a href="https://www.local10.com/business/" target="_blank" class="block text-center bg-white/10 py-2 rounded-lg hover:bg-white/20">Read Business →</a>
+      <h3 class="text-lg mb-3">Business & Money</h3>
+      <p class="text-gray-400 text-sm mb-6">
+        Miami business and finance stories.
+      </p>
+      <a href="https://www.local10.com/business/" target="_blank" class="block text-center bg-white/10 py-2 rounded-lg hover:bg-white/20">
+        Business →
+      </a>
     </div>
 
     <div class="glass p-6 rounded-xl hover-card">
-      <h3 class="text-lg font-medium mb-3">Traffic & Weather</h3>
-      <p class="text-sm text-gray-400 mb-6">Miami traffic, weather, storms, and live updates that impact daily business movement.</p>
-      <p class="text-xs text-gray-500 uppercase tracking-widest mb-3">Source: Local 10</p>
-      <a href="https://www.local10.com/weather/" target="_blank" class="block text-center bg-white/10 py-2 rounded-lg hover:bg-white/20">View Weather →</a>
+      <h3 class="text-lg mb-3">Florida News</h3>
+      <p class="text-gray-400 text-sm mb-6">
+        Statewide updates impacting Miami.
+      </p>
+      <a href="https://www.local10.com/news/florida/" target="_blank" class="block text-center bg-white/10 py-2 rounded-lg hover:bg-white/20">
+        Florida →
+      </a>
     </div>
 
-    <div class="glass p-6 rounded-xl hover-card">
-      <h3 class="text-lg font-medium mb-3">Local 10 Investigates</h3>
-      <p class="text-sm text-gray-400 mb-6">Investigative reporting, accountability coverage, and major South Florida issues.</p>
-      <p class="text-xs text-gray-500 uppercase tracking-widest mb-3">Source: Local 10</p>
-      <a href="https://www.local10.com/news/investigations/" target="_blank" class="block text-center bg-white/10 py-2 rounded-lg hover:bg-white/20">Read Investigations →</a>
-    </div>
-
-    <div class="glass p-6 rounded-xl hover-card">
-      <h3 class="text-lg font-medium mb-3">Miami Tech & Features</h3>
-      <p class="text-sm text-gray-400 mb-6">Technology, local features, culture, innovation, and community updates.</p>
-      <p class="text-xs text-gray-500 uppercase tracking-widest mb-3">Source: Local 10</p>
-      <a href="https://www.local10.com/features/" target="_blank" class="block text-center bg-white/10 py-2 rounded-lg hover:bg-white/20">Read Features →</a>
-    </div>
-
-    <div class="glass p-6 rounded-xl hover-card">
-      <h3 class="text-lg font-medium mb-3">Florida News</h3>
-      <p class="text-sm text-gray-400 mb-6">Statewide stories affecting Miami residents, investors, companies, and operators.</p>
-      <p class="text-xs text-gray-500 uppercase tracking-widest mb-3">Source: Local 10</p>
-      <a href="https://www.local10.com/news/florida/" target="_blank" class="block text-center bg-white/10 py-2 rounded-lg hover:bg-white/20">Read Florida News →</a>
-    </div>
   </div>
 </section>
 
-<section id="markets" class="bg-[#0a0a0a] py-20 border-y border-white/[0.05]">
+<!-- TRADINGVIEW -->
+<section class="bg-[#0a0a0a] py-20 border-y border-white/10">
   <div class="max-w-7xl mx-auto px-6">
-    <h2 class="text-2xl font-semibold mb-6">Live Markets</h2>
+    <h2 class="text-2xl mb-6">Live Markets</h2>
+
     <div class="glass p-4 rounded-xl">
       <div id="tradingview-widget" style="height:500px;"></div>
     </div>
   </div>
 </section>
 
-<section id="submit" class="max-w-2xl mx-auto px-6 py-20">
-  <h2 class="text-3xl font-semibold text-center mb-4">Submit to the Newsroom</h2>
-  <p class="text-gray-400 text-center mb-10">Submit press releases, finance tips, market insights, or Miami business stories.</p>
-
-  <form class="space-y-5" onsubmit="event.preventDefault(); alert('Story submitted. Connect this to Formspree, Airtable, or Supabase next.');">
-    <input class="w-full bg-[#080808] border border-white/10 rounded-lg px-4 py-3 outline-none" placeholder="Full Name" />
-    <input class="w-full bg-[#080808] border border-white/10 rounded-lg px-4 py-3 outline-none" placeholder="Email" />
-    <input class="w-full bg-[#080808] border border-white/10 rounded-lg px-4 py-3 outline-none" placeholder="Story Headline" />
-    <input class="w-full bg-[#080808] border border-white/10 rounded-lg px-4 py-3 outline-none" placeholder="Original source link if submitting another publisher" />
-    <textarea rows="5" class="w-full bg-[#080808] border border-white/10 rounded-lg px-4 py-3 outline-none" placeholder="Story summary or article draft"></textarea>
-    <button class="w-full bg-white text-black py-3 rounded-lg font-semibold hover:bg-cyan-300">Submit Story</button>
-  </form>
-</section>
-
+<!-- FOOTER -->
 <footer class="border-t border-white/10 py-10 text-center text-gray-500 text-sm">
-  <p>© 2026 Miami Finance News. All rights reserved.</p>
-  <p class="mt-2">Curated links redirect to original publishers. Credit belongs to Yahoo Finance and Local 10.</p>
+  © 2026 Miami Finance News
 </footer>
 
+<!-- TRADINGVIEW SCRIPT -->
 <script>
 const script = document.createElement("script");
 script.src = "https://s3.tradingview.com/tv.js";
@@ -208,9 +203,7 @@ script.onload = () => {
     height: 500,
     symbol: "NASDAQ:AAPL",
     theme: "dark",
-    style: "1",
-    locale: "en",
-    allow_symbol_change: true
+    style: "1"
   });
 };
 document.body.appendChild(script);
