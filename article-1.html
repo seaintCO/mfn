@@ -4,101 +4,114 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Inside Azul | Miami Finance News</title>
-
 <script src="https://cdn.tailwindcss.com"></script>
 
 <style>
-body {
-  background: #050505;
-  color: white;
+body { background:#050505; color:white; }
+.glass {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  backdrop-filter: blur(12px);
+}
+.article-img {
+  user-select: none;
+  -webkit-user-drag: none;
+  -webkit-touch-callout: none;
 }
 </style>
 </head>
 
-<body class="font-sans">
+<body class="font-sans antialiased">
 
-<!-- NAVBAR -->
-<nav class="border-b border-white/10 bg-black/80 backdrop-blur-xl">
+<nav class="border-b border-white/10 bg-black/80 backdrop-blur-xl sticky top-0 z-50">
   <div class="max-w-5xl mx-auto px-6 py-5 flex justify-between items-center">
     <a href="index.html" class="font-semibold uppercase tracking-wide">
       Miami Finance News
     </a>
-
     <a href="index.html" class="text-sm text-gray-400 hover:text-white">
       ← Back Home
     </a>
   </div>
 </nav>
 
-<!-- ARTICLE -->
-<main class="max-w-4xl mx-auto px-6 py-16">
+<main class="max-w-4xl mx-auto px-6 py-14">
 
-  <!-- META -->
   <p class="text-xs uppercase tracking-widest text-cyan-400 mb-4">
-    Miami Finance • Live Event Coverage
+    Miami Finance • Founder Event Coverage
   </p>
 
-  <!-- TITLE -->
   <h1 class="text-4xl md:text-6xl font-semibold leading-tight mb-6">
     Inside Azul: A $12.5B Founder Room Where Execution Defines Everything
   </h1>
 
-  <!-- SUBTITLE -->
-  <p class="text-gray-400 text-lg mb-10">
-    An inside look at one of the most concentrated rooms of builders, capital, and conviction forming in Miami.
+  <p class="text-gray-400 text-lg mb-6">
+    An inside look at one of Miami’s most concentrated rooms of builders, capital, and conviction.
   </p>
 
-  <!-- HEADER IMAGE -->
+  <div class="flex flex-wrap gap-3 mb-10 text-sm">
+    <a href="https://azulventurepartners.space/" target="_blank" class="px-4 py-2 rounded-full bg-cyan-400/10 border border-cyan-400/20 text-cyan-300 hover:bg-cyan-400 hover:text-black">
+      Tagged Event: Azul Venture Partners
+    </a>
+    <span class="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-gray-400">
+      Published Today
+    </span>
+    <span class="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-gray-400">
+      4 Min Read
+    </span>
+  </div>
+
   <div class="mb-12 relative overflow-hidden rounded-xl border border-white/10">
     <img 
       src="assets/azul-event.jpg" 
-      class="w-full object-cover select-none pointer-events-none"
+      class="w-full object-cover article-img pointer-events-none"
       draggable="false"
       oncontextmenu="return false;"
+      alt="Azul private founder event audience"
     />
     <div class="absolute inset-0"></div>
   </div>
 
-  <!-- ARTICLE CONTENT -->
   <article class="space-y-8 text-gray-300 leading-8 text-lg">
 
+    <p>The room wasn’t loud — but it carried weight.</p>
+
     <p>
-      The room wasn’t loud — but it carried weight.
+      At the <a href="https://azulventurepartners.space/" target="_blank" class="text-cyan-300 hover:underline">Azul Venture Partners</a> private founder event, a curated group of companies gathered under one roof, representing a combined valuation of approximately <b>$12.5 billion</b>.
     </p>
 
     <p>
-      At the Azul founder event this week, a curated group of companies gathered under one roof, representing a combined valuation of approximately <b>$12.5 billion</b>. Founders, developers, venture capitalists, and operators moved through conversations that felt less like networking — and more like quiet alignment.
+      Founders, developers, venture capitalists, and investors moved through conversations that felt less like casual networking — and more like serious alignment around what the future of Miami’s innovation economy is becoming.
     </p>
 
     <p>
-      Teams ranging from six to fourteen people stood behind structured ideas, refined products, and clear execution paths. Yet what stood out most wasn’t the scale — it was the contrast.
+      Teams ranging from six to fourteen people stood behind structured ideas, refined products, and clear execution paths. Yet what stood out most wasn’t only the scale of the room — it was the contrast.
     </p>
 
     <p>
       Because among the final selections, one company broke the pattern entirely.
     </p>
 
-    <!-- SECOND IMAGE (UPLOAD LATER) -->
     <div class="my-12 relative overflow-hidden rounded-xl border border-white/10">
       <img 
-        src="assets/founder.jpg" 
-        class="w-full object-cover select-none pointer-events-none"
+        src="assets/azul-stage.jpg" 
+        class="w-full object-cover article-img pointer-events-none"
         draggable="false"
         oncontextmenu="return false;"
+        alt="Final selection moment at Azul private founder event"
       />
       <div class="absolute inset-0"></div>
     </div>
 
     <p class="text-sm text-gray-500 text-center">
-      Selection moment as final teams were recognized.
+      Final selection moment at Azul as top founders and teams were brought on stage.
     </p>
 
     <p>
-      A founder from Tennessee — operating as a <b>team of one</b> — was selected into the final six.
+      Among the final selections, one presence stood out — a founder from Tennessee, an engineering team of one, selected into the final six to present as top developers, founders, venture capitalists, and investors lined up to assess the companies in the room.
     </p>
 
     <p>
-      In a room filled with full teams, capital backing, and structured operations, his inclusion was not accidental. It was a recognition of clarity, intelligence, and execution.
+      In a room filled with full teams, millions in capital backing, and structured operations, his inclusion was not accidental. It was a recognition of clarity, intelligence, and execution.
     </p>
 
     <p>
@@ -109,12 +122,10 @@ body {
       Building an entire software system independently, his presence reinforced a simple but powerful reality: <b>leverage is no longer defined by team size — but by thinking.</b>
     </p>
 
-    <p>
-      The final six companies included:
-    </p>
+    <p>The final six companies included:</p>
 
     <ul class="list-disc ml-6 space-y-2">
-      <li>Saint</li>
+      <li>Seaint</li>
       <li>Coral</li>
       <li>Latitude Systems</li>
       <li>Elemental Labs</li>
@@ -130,17 +141,11 @@ body {
       Events like Azul are becoming increasingly important in Miami’s evolution as a serious market for capital and innovation. Not because of scale alone, but because of the <b>density of decision-makers</b> in one place.
     </p>
 
-    <p>
-      Investors weren’t there to observe — they were there to identify.
-    </p>
+    <p>Investors weren’t there to observe — they were there to identify.</p>
 
-    <p>
-      Founders weren’t there to pitch — they were there to prove.
-    </p>
+    <p>Founders weren’t there to pitch — they were there to prove.</p>
 
-    <p>
-      And in that environment, outcomes shift quickly.
-    </p>
+    <p>And in that environment, outcomes shift quickly.</p>
 
     <p>
       What made this event notable wasn’t just who was present — but what it represented:
@@ -151,31 +156,62 @@ body {
     </p>
 
     <p>
-      Moments like this don’t announce themselves loudly.  
-      They build quietly, inside rooms like these.
+      Moments like this don’t announce themselves loudly. They build quietly, inside rooms like these.
     </p>
 
-    <p>
-      And then they compound.
-    </p>
+    <p>And then they compound.</p>
 
-    <!-- INTERVIEW SECTION -->
-    <div class="mt-16 p-8 border border-white/10 rounded-xl bg-white/5">
-      <h2 class="text-2xl font-semibold mb-4">
-        Founder Interview — Saint
+    <div class="mt-16 p-8 glass rounded-xl">
+      <p class="text-xs uppercase tracking-widest text-cyan-400 mb-4">
+        Founder Interview
+      </p>
+
+      <h2 class="text-2xl font-semibold mb-6">
+        Founder Interview — Seaint
       </h2>
 
-      <p class="text-gray-400">
-        [Insert interview notes here — quotes, strategy, mindset, insights]
+      <p>
+        “I don’t believe in luck. I believe God put us here for a reason.
+      </p>
+
+      <p class="mt-4">
+        I always joke and say we are a team of three: me, my partner, and the Man who runs it all — God.
+      </p>
+
+      <p class="mt-4">
+        I’m thankful for my mom and brother, who showed me sacrifice; my little sister, who, even through having autism, has always carried a champion mentality; my partner in crime, Chelsie; and my mentor and partner.
+      </p>
+
+      <p class="mt-4">
+        Everyone has played a pivotal role in my life, but my mentor Cruz showed me what it looks like to be a true man of God.
+      </p>
+
+      <p class="mt-4">
+        Years ago, I would have been too scared to show up alone. I would have been embarrassed. But he helped me realize I belong — and that I am never alone when I have God.
+      </p>
+
+      <p class="mt-4">
+        Soon, we will echo around the world. And it will all be thanks to God and the sacrifices we each made to get to this point.”
+      </p>
+    </div>
+
+    <div class="mt-14 p-6 rounded-xl border border-cyan-400/20 bg-cyan-400/5">
+      <p class="text-sm text-gray-400">
+        Event reference:
+        <a href="https://azulventurepartners.space/" target="_blank" class="text-cyan-300 hover:underline">
+          Azul Venture Partners Private Founder Event
+        </a>
       </p>
     </div>
 
   </article>
 </main>
 
-<!-- FOOTER -->
 <footer class="border-t border-white/10 py-10 text-center text-gray-500 text-sm">
-  © 2026 Miami Finance News
+  <p>© 2026 Miami Finance News</p>
+  <p class="mt-2">
+    Independent editorial coverage. Event link provided for reference.
+  </p>
 </footer>
 
 </body>
