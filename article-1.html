@@ -25,12 +25,6 @@ body {
   -webkit-touch-callout: none;
 }
 
-.protected-stage {
-  filter: blur(0.7px) contrast(0.9) brightness(0.85);
-  image-rendering: auto;
-  transform: scale(1.01);
-}
-
 #google_translate_element select {
   background: #0a0a0a;
   color: white;
@@ -39,29 +33,25 @@ body {
   padding: 8px;
   font-size: 14px;
 }
-
-@media (max-width: 640px) {
-  .stage-frame {
-    max-height: 260px;
-  }
-}
 </style>
 </head>
 
 <body class="font-sans antialiased overflow-x-hidden">
 
+<!-- NAVBAR -->
 <nav class="border-b border-white/10 bg-black/80 backdrop-blur-xl sticky top-0 z-50">
-  <div class="max-w-5xl mx-auto px-5 py-4 flex justify-between items-center gap-4">
-    <a href="index.html" class="font-semibold uppercase tracking-wide text-sm md:text-base">
+  <div class="max-w-5xl mx-auto px-5 py-4 flex justify-between items-center">
+    <a href="index.html" class="font-semibold uppercase tracking-wide">
       Miami Finance News
     </a>
 
-    <a href="index.html" class="text-sm text-gray-400 hover:text-white whitespace-nowrap">
+    <a href="index.html" class="text-sm text-gray-400 hover:text-white">
       ← Back Home
     </a>
   </div>
 </nav>
 
+<!-- MAIN -->
 <main class="max-w-4xl mx-auto px-5 md:px-6 py-10 md:py-14">
 
   <p class="text-xs uppercase tracking-widest text-cyan-400 mb-4">
@@ -76,8 +66,10 @@ body {
     An inside look at one of Miami’s most concentrated rooms of builders, capital, and conviction.
   </p>
 
+  <!-- TAGS -->
   <div class="flex flex-wrap gap-3 mb-8 text-sm">
-    <a href="https://azulventurepartners.space/" target="_blank" class="px-4 py-2 rounded-full bg-cyan-400/10 border border-cyan-400/20 text-cyan-300 hover:bg-cyan-400 hover:text-black">
+    <a href="https://azulventurepartners.space/" target="_blank"
+      class="px-4 py-2 rounded-full bg-cyan-400/10 border border-cyan-400/20 text-cyan-300 hover:bg-cyan-400 hover:text-black">
       Tagged Event: Azul Venture Partners
     </a>
 
@@ -90,6 +82,7 @@ body {
     </span>
   </div>
 
+  <!-- TRANSLATE -->
   <div class="mb-10 glass rounded-xl p-4">
     <p class="text-xs uppercase tracking-widest text-gray-400 mb-3">
       Translate Article
@@ -97,61 +90,64 @@ body {
     <div id="google_translate_element"></div>
   </div>
 
-  <div class="mb-10 md:mb-12 relative overflow-hidden rounded-xl border border-white/10">
+  <!-- HEADER IMAGE -->
+  <div class="mb-10 relative overflow-hidden rounded-xl border border-white/10">
     <img 
       src="assets/azul-event.jpg" 
       class="w-full max-h-[520px] object-cover article-img pointer-events-none"
       draggable="false"
       oncontextmenu="return false;"
-      alt="Azul private founder event audience"
     />
-    <div class="absolute inset-0"></div>
   </div>
 
+  <!-- ARTICLE -->
   <article class="space-y-7 text-gray-300 leading-8 text-base md:text-lg">
 
     <p>The room wasn’t loud — but it carried weight.</p>
 
     <p>
-      At the <a href="https://azulventurepartners.space/" target="_blank" class="text-cyan-300 hover:underline">Azul Venture Partners</a> private founder event, a curated group of companies gathered under one roof, representing a combined valuation of approximately <b>$12.5 billion</b>.
+      At the <a href="https://azulventurepartners.space/" target="_blank" class="text-cyan-300">Azul Venture Partners</a> private founder event, companies gathered under one roof representing a combined valuation of approximately <b>$12.5 billion</b>.
     </p>
 
     <p>
-      Founders, developers, venture capitalists, and investors moved through conversations that felt less like casual networking — and more like serious alignment around what the future of Miami’s innovation economy is becoming.
+      Founders, developers, venture capitalists, and investors moved through conversations that felt less like networking — and more like alignment.
     </p>
 
     <p>
-      Teams ranging from six to fourteen people stood behind structured ideas, refined products, and clear execution paths. Yet what stood out most wasn’t only the scale of the room — it was the contrast.
+      Yet what stood out wasn’t only scale — it was contrast.
     </p>
 
-    <p>
-      Because among the final selections, one company broke the pattern entirely.
-    </p>
+    <!-- SECOND IMAGE (SMALL + SLIGHT BLUR) -->
+    <div class="my-12 flex justify-center">
+      <div class="relative w-full max-w-xl overflow-hidden rounded-xl border border-white/10 bg-black">
 
-    <div class="my-10 mx-auto max-w-2xl stage-frame relative overflow-hidden rounded-xl border border-white/10 bg-black">
-      <img 
-        src="assets/azul-stage.jpg" 
-        class="w-full max-h-[340px] object-cover article-img pointer-events-none protected-stage opacity-95"
-        draggable="false"
-        oncontextmenu="return false;"
-        alt="Final selection moment at Azul private founder event"
-      />
-      <div class="absolute inset-0 bg-black/10"></div>
-      <div class="absolute bottom-3 right-3 text-[10px] uppercase tracking-widest text-white/40">
-        Miami Finance News
+        <img 
+          src="assets/azul-stage.jpg" 
+          class="w-full max-h-[300px] object-cover article-img pointer-events-none"
+          style="filter: blur(0.6px) brightness(0.93) contrast(0.97);"
+          draggable="false"
+          oncontextmenu="return false;"
+        />
+
+        <div class="absolute inset-0 bg-black/10"></div>
+
+        <div class="absolute bottom-3 right-3 text-[10px] text-white/50 uppercase tracking-widest">
+          Miami Finance News
+        </div>
+
       </div>
     </div>
 
-    <p class="text-sm text-gray-500 text-center">
-      Final selection moment at Azul as top founders and teams were brought on stage. (Middle , Seaint Founder, Luis Altamirano)
+    <p class="text-xs text-gray-500 text-center">
+      Final selection moment at Azul.
     </p>
 
     <p>
-      Among the final selections, one presence stood out — a founder from Tennessee, an engineering team of one, selected into the final six to present as top developers, founders, venture capitalists, and investors lined up to assess the companies in the room.
+      Among the final selections, one presence stood out — a founder from Tennessee, a team of one.
     </p>
 
     <p>
-      In a room filled with full teams, millions in capital backing, and structured operations, his inclusion was not accidental. It was a recognition of clarity, intelligence, and execution.
+      In a room filled with full teams and capital backing, his inclusion was a recognition of clarity, intelligence, and execution.
     </p>
 
     <p>
@@ -159,7 +155,7 @@ body {
     </p>
 
     <p>
-      Building an entire software system independently, his presence reinforced a simple but powerful reality: <b>leverage is no longer defined by team size — but by thinking.</b>
+      <b>Leverage is no longer defined by team size — but by thinking.</b>
     </p>
 
     <p>The final six companies included:</p>
@@ -174,34 +170,23 @@ body {
     </ul>
 
     <p>
-      Each brought a different angle — from infrastructure to AI systems to consumer platforms — but all shared one thing: they are actively building.
+      Events like Azul represent Miami transitioning into a serious arena for high-level operators.
     </p>
 
     <p>
-      Events like Azul are becoming increasingly important in Miami’s evolution as a serious market for capital and innovation. Not because of scale alone, but because of the <b>density of decision-makers</b> in one place.
-    </p>
-
-    <p>Investors weren’t there to observe — they were there to identify.</p>
-
-    <p>Founders weren’t there to pitch — they were there to prove.</p>
-
-    <p>And in that environment, outcomes shift quickly.</p>
-
-    <p>
-      What made this event notable wasn’t just who was present — but what it represented:
+      Investors were there to identify. Founders were there to prove.
     </p>
 
     <p>
-      A transition from Miami being seen as emerging… to being treated as a <b>serious arena for high-level operators</b>.
+      And in that environment, outcomes shift quickly.
     </p>
 
     <p>
-      Moments like this don’t announce themselves loudly. They build quietly, inside rooms like these.
+      Moments like this build quietly — and then they compound.
     </p>
 
-    <p>And then they compound.</p>
-
-    <div class="mt-14 md:mt-16 p-6 md:p-8 glass rounded-xl">
+    <!-- INTERVIEW -->
+    <div class="mt-14 p-6 md:p-8 glass rounded-xl">
       <p class="text-xs uppercase tracking-widest text-cyan-400 mb-4">
         Founder Interview
       </p>
@@ -219,53 +204,32 @@ body {
       </p>
 
       <p class="mt-4">
-        I’m thankful for my mom and brother, who showed me sacrifice; my little sister, who, even through having autism, has always carried a champion mentality; my partner in crime, Chelsie; and my mentor and partner.
+        I’m thankful for my family and those who sacrificed for me, and for the people who helped shape who I am today.
       </p>
 
       <p class="mt-4">
-        Everyone has played a pivotal role in my life, but my mentor Cruz showed me what it looks like to be a true man of God — a leader, and a man who remains stoic even when everything is against him.
+        My mentor showed me what it means to be a true man of God — to stay strong even when everything is against you.
       </p>
 
       <p class="mt-4">
-        I am here because, when it felt like everyone left me out to dry, he took me in when many would have walked away. He is not one to back down. He has pushed me to surpass what I thought was humanly impossible, and somehow, it all ties back to faith.
+        Years ago, I would have been too scared to show up alone. Now I know I belong — and I am never alone when I have God.
       </p>
 
       <p class="mt-4">
-        Years ago, I would have been too scared to show up alone. But he helped me realize I belong — and that I am never alone when I have God.
-      </p>
-
-      <p class="mt-4">
-        I mess up a lot, and by no means am I where I want to be. But every time I feel like I am drowning, he has always been there to help pull me out. And if I told him that, he would say it was God — which only shows the kind of man he is.
-      </p>
-
-      <p class="mt-4">
-        One of a kind.
-      </p>
-
-      <p class="mt-4">
-        Soon, we will echo around the world. And it will all be thanks to God and the sacrifices we each made to get to this point.”
-      </p>
-    </div>
-
-    <div class="mt-12 p-6 rounded-xl border border-cyan-400/20 bg-cyan-400/5">
-      <p class="text-sm text-gray-400">
-        Event reference:
-        <a href="https://azulventurepartners.space/" target="_blank" class="text-cyan-300 hover:underline">
-          Azul Venture Partners Private Founder Event
-        </a>
+        Soon, we will echo around the world. And it will all be thanks to God and the sacrifices we made to get here.”
       </p>
     </div>
 
   </article>
+
 </main>
 
-<footer class="border-t border-white/10 py-10 px-5 text-center text-gray-500 text-sm">
-  <p>© 2026 Miami Finance News</p>
-  <p class="mt-2">
-    Independent editorial coverage. Event link provided for reference.
-  </p>
+<!-- FOOTER -->
+<footer class="border-t border-white/10 py-10 text-center text-gray-500 text-sm">
+  © 2026 Miami Finance News
 </footer>
 
+<!-- TRANSLATE SCRIPT -->
 <script>
 function googleTranslateElementInit() {
   new google.translate.TranslateElement(
@@ -276,14 +240,6 @@ function googleTranslateElementInit() {
 </script>
 
 <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-
-<script>
-document.addEventListener("contextmenu", function(e) {
-  if (e.target.tagName === "IMG") {
-    e.preventDefault();
-  }
-});
-</script>
 
 </body>
 </html>
