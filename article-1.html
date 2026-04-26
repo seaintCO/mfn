@@ -25,6 +25,12 @@ body {
   -webkit-touch-callout: none;
 }
 
+.protected-stage {
+  filter: blur(0.7px) contrast(0.9) brightness(0.85);
+  image-rendering: auto;
+  transform: scale(1.01);
+}
+
 #google_translate_element select {
   background: #0a0a0a;
   color: white;
@@ -32,6 +38,12 @@ body {
   border-radius: 8px;
   padding: 8px;
   font-size: 14px;
+}
+
+@media (max-width: 640px) {
+  .stage-frame {
+    max-height: 260px;
+  }
 }
 </style>
 </head>
@@ -116,25 +128,21 @@ body {
       Because among the final selections, one company broke the pattern entirely.
     </p>
 
-    <div class="my-12 flex justify-center">
-      <div class="relative w-full max-w-xl overflow-hidden rounded-xl border border-white/10 bg-black">
-        <img 
-          src="assets/azul-stage.jpg" 
-          class="w-full max-h-[300px] object-cover article-img pointer-events-none"
-          draggable="false"
-          oncontextmenu="return false;"
-          alt="Final selection moment at Azul private founder event"
-        />
-
-        <div class="absolute inset-0 bg-black/10"></div>
-
-        <div class="absolute bottom-3 right-3 text-[10px] uppercase tracking-widest text-white/50">
-          Miami Finance News
-        </div>
+    <div class="my-10 mx-auto max-w-2xl stage-frame relative overflow-hidden rounded-xl border border-white/10 bg-black">
+      <img 
+        src="assets/azul-stage.jpg" 
+        class="w-full max-h-[340px] object-cover article-img pointer-events-none protected-stage opacity-90"
+        draggable="false"
+        oncontextmenu="return false;"
+        alt="Final selection moment at Azul private founder event"
+      />
+      <div class="absolute inset-0 bg-black/10"></div>
+      <div class="absolute bottom-3 right-3 text-[10px] uppercase tracking-widest text-white/40">
+        Miami Finance News
       </div>
     </div>
 
-    <p class="text-xs text-gray-500 text-center max-w-md mx-auto">
+    <p class="text-sm text-gray-500 text-center">
       Final selection moment at Azul as top founders and teams were brought on stage.
     </p>
 
