@@ -38,8 +38,8 @@ body {
 
     <div class="hidden md:flex gap-6 text-sm text-gray-400">
       <a href="#latest" class="hover:text-white">Latest</a>
+      <a href="#more" class="hover:text-white">More</a>
       <a href="#yahoo" class="hover:text-white">Markets</a>
-      <a href="#local" class="hover:text-white">Miami News</a>
     </div>
   </div>
 </nav>
@@ -64,7 +64,7 @@ body {
   <div class="grid md:grid-cols-2 glass rounded-xl overflow-hidden">
 
     <!-- IMAGE -->
-    <a href="article-1.html" class="block overflow-hidden">
+    <a href="article-1.html">
       <img 
         src="assets/azul-event.jpg" 
         class="w-full h-full object-cover hover:opacity-90 transition"
@@ -84,7 +84,7 @@ body {
       </a>
 
       <p class="text-gray-400 mb-8">
-        An inside look at one of Miami’s most elite founder gatherings, where capital, execution, and intelligence defined the room.
+        An inside look at one of Miami’s most elite founder gatherings.
       </p>
 
       <a href="article-1.html" class="bg-white text-black px-6 py-3 rounded-lg text-sm font-semibold hover:bg-cyan-300 inline-block">
@@ -95,7 +95,33 @@ body {
   </div>
 </section>
 
-<!-- YAHOO / MARKET LINKS -->
+<!-- MORE ARTICLES -->
+<section id="more" class="max-w-7xl mx-auto px-6 mb-20">
+  <h2 class="text-2xl mb-8">More Stories</h2>
+
+  <div class="grid md:grid-cols-2 gap-6">
+
+    <!-- ARTICLE 2 -->
+    <a href="article-2.html">
+      <div class="glass p-6 rounded-xl hover-card">
+        <h3 class="text-xl font-semibold mb-2">
+          Final Day at Azul: Winners, Builders, and What Actually Matters
+        </h3>
+
+        <p class="text-gray-400 text-sm mb-4">
+          Coral takes Best Company while Seaint earns top developer recognition.
+        </p>
+
+        <span class="text-xs text-cyan-400 uppercase tracking-widest">
+          Final Day Coverage
+        </span>
+      </div>
+    </a>
+
+  </div>
+</section>
+
+<!-- MARKET LINKS -->
 <section id="yahoo" class="bg-[#0a0a0a] py-20 border-y border-white/10">
   <div class="max-w-7xl mx-auto px-6">
 
@@ -106,7 +132,7 @@ body {
       <div class="glass p-6 rounded-xl hover-card">
         <h3 class="text-lg mb-3">Latest Market News</h3>
         <p class="text-gray-400 text-sm mb-6">
-          Real-time finance headlines, stocks, and market updates.
+          Real-time finance headlines, stocks, and updates.
         </p>
         <a href="https://finance.yahoo.com/" target="_blank" class="block text-center bg-white/10 py-2 rounded-lg hover:bg-white/20">
           Yahoo Finance →
@@ -116,7 +142,7 @@ body {
       <div class="glass p-6 rounded-xl hover-card">
         <h3 class="text-lg mb-3">Stock Market</h3>
         <p class="text-gray-400 text-sm mb-6">
-          Earnings, stock movers, and investor insights.
+          Earnings and investor insights.
         </p>
         <a href="https://finance.yahoo.com/topic/stock-market-news/" target="_blank" class="block text-center bg-white/10 py-2 rounded-lg hover:bg-white/20">
           View Stocks →
@@ -126,7 +152,7 @@ body {
       <div class="glass p-6 rounded-xl hover-card">
         <h3 class="text-lg mb-3">Economic News</h3>
         <p class="text-gray-400 text-sm mb-6">
-          Inflation, rates, and macroeconomic trends.
+          Inflation, rates, and macro trends.
         </p>
         <a href="https://finance.yahoo.com/topic/economic-news/" target="_blank" class="block text-center bg-white/10 py-2 rounded-lg hover:bg-white/20">
           Economy →
@@ -137,77 +163,10 @@ body {
   </div>
 </section>
 
-<!-- MIAMI NEWS -->
-<section id="local" class="max-w-7xl mx-auto px-6 py-20">
-  <h2 class="text-2xl mb-8">Miami News</h2>
-
-  <div class="grid md:grid-cols-3 gap-6">
-
-    <div class="glass p-6 rounded-xl hover-card">
-      <h3 class="text-lg mb-3">Local Headlines</h3>
-      <p class="text-gray-400 text-sm mb-6">
-        Breaking Miami and South Florida news.
-      </p>
-      <a href="https://www.local10.com/news/local/" target="_blank" class="block text-center bg-white/10 py-2 rounded-lg hover:bg-white/20">
-        Local 10 →
-      </a>
-    </div>
-
-    <div class="glass p-6 rounded-xl hover-card">
-      <h3 class="text-lg mb-3">Business & Money</h3>
-      <p class="text-gray-400 text-sm mb-6">
-        Miami business and finance stories.
-      </p>
-      <a href="https://www.local10.com/business/" target="_blank" class="block text-center bg-white/10 py-2 rounded-lg hover:bg-white/20">
-        Business →
-      </a>
-    </div>
-
-    <div class="glass p-6 rounded-xl hover-card">
-      <h3 class="text-lg mb-3">Florida News</h3>
-      <p class="text-gray-400 text-sm mb-6">
-        Statewide updates impacting Miami.
-      </p>
-      <a href="https://www.local10.com/news/florida/" target="_blank" class="block text-center bg-white/10 py-2 rounded-lg hover:bg-white/20">
-        Florida →
-      </a>
-    </div>
-
-  </div>
-</section>
-
-<!-- TRADINGVIEW -->
-<section class="bg-[#0a0a0a] py-20 border-y border-white/10">
-  <div class="max-w-7xl mx-auto px-6">
-    <h2 class="text-2xl mb-6">Live Markets</h2>
-
-    <div class="glass p-4 rounded-xl">
-      <div id="tradingview-widget" style="height:500px;"></div>
-    </div>
-  </div>
-</section>
-
 <!-- FOOTER -->
 <footer class="border-t border-white/10 py-10 text-center text-gray-500 text-sm">
   © 2026 Miami Finance News
 </footer>
-
-<!-- TRADINGVIEW SCRIPT -->
-<script>
-const script = document.createElement("script");
-script.src = "https://s3.tradingview.com/tv.js";
-script.onload = () => {
-  new TradingView.widget({
-    container_id: "tradingview-widget",
-    width: "100%",
-    height: 500,
-    symbol: "NASDAQ:AAPL",
-    theme: "dark",
-    style: "1"
-  });
-};
-document.body.appendChild(script);
-</script>
 
 </body>
 </html>
