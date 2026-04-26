@@ -19,6 +19,14 @@ body { background:#050505; color:white; }
   -webkit-user-drag: none;
   -webkit-touch-callout: none;
 }
+#google_translate_element select {
+  background:#0a0a0a;
+  color:white;
+  border:1px solid rgba(255,255,255,0.15);
+  border-radius:8px;
+  padding:8px;
+  font-size:14px;
+}
 </style>
 </head>
 
@@ -29,9 +37,7 @@ body { background:#050505; color:white; }
     <a href="index.html" class="font-semibold uppercase tracking-wide text-sm md:text-base">
       Miami Finance News
     </a>
-    <a href="index.html" class="text-gray-400 text-sm hover:text-white">
-      ← Back
-    </a>
+    <a href="index.html" class="text-gray-400 text-sm hover:text-white">← Back</a>
   </div>
 </nav>
 
@@ -49,6 +55,13 @@ body { background:#050505; color:white; }
     The final day wasn’t about introductions. It was about outcomes.
   </p>
 
+  <div class="mb-10 glass rounded-xl p-4">
+    <p class="text-xs uppercase tracking-widest text-gray-400 mb-3">
+      Translate Article
+    </p>
+    <div id="google_translate_element"></div>
+  </div>
+
   <div class="mb-12 relative overflow-hidden rounded-xl border border-white/10 bg-black">
     <img 
       src="assets/azul-final.jpg" 
@@ -60,14 +73,9 @@ body { background:#050505; color:white; }
     />
 
     <div class="absolute inset-0 bg-black/20"></div>
-
     <div class="absolute inset-0 opacity-[0.14] mix-blend-overlay"
-      style="
-        background-image: url('https://grainy-gradients.vercel.app/noise.svg');
-        background-size: 160px;
-      ">
+      style="background-image: url('https://grainy-gradients.vercel.app/noise.svg'); background-size: 160px;">
     </div>
-
     <div class="absolute bottom-4 right-4 text-[10px] md:text-xs uppercase tracking-widest text-white/50">
       Miami Finance News
     </div>
@@ -99,7 +107,7 @@ body { background:#050505; color:white; }
       </p>
 
       <p class="text-sm text-gray-500 mb-6">
-        Recognitions were handed out across company performance, leadership, engineering, AI, investor appeal, and market execution.
+        Recognitions were handed out across company performance, leadership, engineering, AI, investor appeal, product strategy, and market execution.
       </p>
 
       <ul class="space-y-3 text-gray-300">
@@ -118,7 +126,7 @@ body { background:#050505; color:white; }
         <li><b class="text-white">Latitude Systems</b> — Best Go-To-Market Discipline</li>
         <li><b class="text-white">Latitude Systems</b> — Strongest Strategic Roadmap</li>
 
-        <li><b class="text-white">MedFord A</b> — Product Innovation</li>
+        <li><b class="text-white">MedFord AI</b> — Product Innovation</li>
         <li><b class="text-white">Elemental Labs</b> — Best User Experience Direction</li>
         <li><b class="text-white">Elemental Labs</b> — Technical Product Vision</li>
 
@@ -128,6 +136,39 @@ body { background:#050505; color:white; }
 
         <li><b class="text-white">Mindora AI</b> — Vision in Artificial Intelligence</li>
       </ul>
+    </div>
+
+    <div class="glass rounded-xl p-6 md:p-8 my-10">
+      <p class="text-xs uppercase tracking-widest text-cyan-400 mb-5">
+        Why Each Recognition Mattered
+      </p>
+
+      <div class="space-y-6 text-gray-300">
+        <p><b class="text-white">Coral — Best Company:</b> Coral stood out as the most complete company in the room, combining product maturity, operational discipline, market clarity, and strong team execution.</p>
+        <p><b class="text-white">Coral — Investor Favorite:</b> Investors responded to Coral’s polished structure, $170 million valuation, 22-person team, and ability to communicate scale with confidence.</p>
+        <p><b class="text-white">Coral — Best Operating Structure:</b> Coral’s internal systems and team alignment made the company feel built for expansion, not just early traction.</p>
+        <p><b class="text-white">Coral — Strongest Market Position:</b> Coral presented a clear lane in the market with enough traction and structure to make its opportunity feel immediate.</p>
+
+        <p><b class="text-white">Seaint — Best Developer & Engineer:</b> Seaint’s technical execution stood out because a lean founding team built across software, automation, AI infrastructure, websites, and operational workflows with unusual speed.</p>
+        <p><b class="text-white">Seaint — Groundbreaking Company Recognition:</b> Seaint was recognized for building a broader intelligence layer rather than a single narrow tool, showing how a small team can compete against larger, capital-backed groups.</p>
+        <p><b class="text-white">Seaint — Most Diverse AI Systems:</b> This recognition reflected Seaint’s range across AI agents, automation, media systems, business infrastructure, and software workflows.</p>
+        <p><b class="text-white">Seaint — Investor Favorite:</b> Seaint drew attention because its lean structure made the output feel disproportionate to the team size — a signal investors often look for in early companies.</p>
+        <p><b class="text-white">Luis Altamirano — Azul Founder of Distinction:</b> This recognition reflected leadership, conviction, resilience, and the ability to represent a small founding team with presence in a room filled with larger organizations.</p>
+
+        <p><b class="text-white">Synth AI — Strategic Market Execution:</b> Synth AI was recognized for presenting a clear market entry plan and a disciplined path for adoption.</p>
+        <p><b class="text-white">Latitude Systems — Best Go-To-Market Discipline:</b> Latitude showed strong discipline in how it planned to reach customers, sequence growth, and avoid wasted motion.</p>
+        <p><b class="text-white">Latitude Systems — Strongest Strategic Roadmap:</b> The company’s roadmap stood out for being organized, measurable, and built around long-term positioning.</p>
+
+        <p><b class="text-white">MedFord AI — Product Innovation:</b> MedFord AI earned recognition for bringing a product concept that felt useful, practical, and immediately applicable.</p>
+        <p><b class="text-white">Elemental Labs — Best User Experience Direction:</b> Elemental Labs showed a strong sense of product usability and how customers would interact with the platform.</p>
+        <p><b class="text-white">Elemental Labs — Technical Product Vision:</b> The team connected product design with technical depth, creating a vision that felt both ambitious and buildable.</p>
+
+        <p><b class="text-white">Orai Technologies — Emerging Technology Impact:</b> Orai stood out for its focus on future-facing systems and the way new technology can change communication and decision-making.</p>
+        <p><b class="text-white">Orai Technologies — Best Future Systems Concept:</b> This recognition highlighted Orai’s ability to think beyond current tools and toward infrastructure for the next wave of companies.</p>
+        <p><b class="text-white">Zephyr Labs — Breakthrough Infrastructure Idea:</b> Zephyr Labs earned recognition for presenting an infrastructure concept with the potential to unlock broader systems-level value.</p>
+
+        <p><b class="text-white">Mindora AI — Vision in Artificial Intelligence:</b> Mindora AI stood out for explaining AI not just as automation, but as a decision layer for the future of business.</p>
+      </div>
     </div>
 
     <p>
@@ -147,7 +188,7 @@ body { background:#050505; color:white; }
     </p>
 
     <p>
-      The recognition around <b>Luis Altamirano</b> reflected more than technical ability. The <b>Azul Founder of Distinction</b> recognition spoke to leadership, resilience, conviction, and the rare ability to stand as a one-man founder inside a room built for teams.
+      The recognition around <b>Luis Altamirano</b> reflected more than technical ability. The <b>Azul Founder of Distinction</b> recognition spoke to leadership, resilience, conviction, and the rare ability to represent a lean founding team inside a room built for larger teams.
     </p>
 
     <p>
@@ -159,7 +200,7 @@ body { background:#050505; color:white; }
     </p>
 
     <p>
-      A single operator building at a level competitive with entire teams shifted the narrative in the room.
+      A small team building at a level competitive with larger organizations shifted the narrative in the room.
     </p>
 
     <p>
@@ -170,13 +211,7 @@ body { background:#050505; color:white; }
       Infrastructure. AI systems. Platforms. Tools. Market strategy. Product vision.
     </p>
 
-    <p>
-      But they all shared one thing:
-    </p>
-
-    <p>
-      <b>They are actively building.</b>
-    </p>
+    <p><b>They are actively building.</b></p>
 
     <div class="mt-12 p-6 rounded-xl border border-white/10 bg-white/5">
       <p class="text-xs uppercase tracking-widest text-cyan-400 mb-3">
@@ -245,6 +280,17 @@ body { background:#050505; color:white; }
   <p>© 2026 Miami Finance News</p>
   <p class="mt-2">Independent editorial coverage. Event link provided for reference.</p>
 </footer>
+
+<script>
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement(
+    { pageLanguage: 'en' },
+    'google_translate_element'
+  );
+}
+</script>
+
+<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
 <script>
 document.addEventListener("contextmenu", function(e) {
