@@ -1,51 +1,165 @@
-<script>
-async function loadYahooNews() {
-    try {
-        const res = await fetch("https://www.yahoo.com/news/rss/finance");
-        const text = await res.text();
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MIAMI SIGNAL | Finance & Markets</title>
 
-        const parser = new DOMParser();
-        const xml = parser.parseFromString(text, "text/xml");
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
 
-        const items = [...xml.querySelectorAll("item")].slice(0, 6);
-
-        const container = document.getElementById("yahoo-news");
-
-        container.innerHTML = items.map(item => {
-            const title = item.querySelector("title")?.textContent || "Article";
-            const link = item.querySelector("link")?.textContent || "https://finance.yahoo.com/";
-            const desc = (item.querySelector("description")?.textContent || "")
-                .replace(/<[^>]+>/g, "")
-                .slice(0, 140) + "...";
-
-            return `
-                <div class="bg-[#050505] border border-white/[0.04] rounded-xl p-6 flex flex-col h-full hover:bg-white/[0.02] transition">
-                    <h3 class="text-lg font-medium text-white mb-3">
-                        ${title}
-                    </h3>
-
-                    <p class="text-sm text-gray-400 mb-6">
-                        ${desc}
-                    </p>
-
-                    <div class="mt-auto pt-4 border-t border-white/[0.04]">
-                        <p class="text-xs text-gray-500 uppercase tracking-widest mb-3">
-                            Source: Yahoo Finance
-                        </p>
-
-                        <a href="${link}" target="_blank"
-                           class="w-full bg-white/[0.03] hover:bg-white/[0.08] border border-white/[0.08] text-white text-sm py-2 px-4 rounded-lg flex items-center justify-center gap-2">
-                            Read on Yahoo →
-                        </a>
-                    </div>
-                </div>
-            `;
-        }).join("");
-
-    } catch (err) {
-        console.error("Yahoo load error", err);
-    }
+<style>
+body {
+  background: #050505;
+  color: white;
 }
 
-loadYahooNews();
+.glass {
+  background: rgba(255,255,255,0.02);
+  border: 1px solid rgba(255,255,255,0.05);
+  backdrop-filter: blur(10px);
+}
+
+.hover-card {
+  transition: all 0.3s ease;
+}
+.hover-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0 40px rgba(34,211,238,0.1);
+}
+</style>
+</head>
+
+<body class="font-sans">
+
+<!-- NAVBAR -->
+<nav class="fixed top-0 w-full z-50 glass">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+    <h1 class="font-semibold tracking-wide uppercase">Miami Signal</h1>
+    <div class="hidden md:flex gap-6 text-sm text-gray-400">
+      <a href="#latest">Latest</a>
+      <a href="#yahoo">Yahoo</a>
+      <a href="#markets">Markets</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="pt-28 pb-20 text-center max-w-5xl mx-auto px-6">
+  <h1 class="text-5xl md:text-7xl font-semibold leading-tight">
+    MIAMI MARKETS.<br>
+    GLOBAL FINANCE.<br>
+    <span class="text-gray-500">EDITORIAL INTEL.</span>
+  </h1>
+
+  <p class="mt-6 text-gray-400">
+    Miami’s modern finance portal. Local stories + global market intelligence.
+  </p>
+</section>
+
+<!-- LATEST STORY -->
+<section id="latest" class="max-w-7xl mx-auto px-6 mb-20">
+  <h2 class="text-2xl mb-6">Latest Story</h2>
+
+  <div class="glass p-10 rounded-xl">
+    <h3 class="text-3xl font-semibold mb-4">
+      Your Miami Story Goes Here
+    </h3>
+
+    <p class="text-gray-400">
+      This is your featured article space. Replace with your real story today.
+    </p>
+  </div>
+</section>
+
+<!-- YAHOO SECTION -->
+<section id="yahoo" class="bg-[#0a0a0a] py-20">
+  <div class="max-w-7xl mx-auto px-6">
+
+    <h2 class="text-2xl mb-8">Yahoo Finance Coverage</h2>
+
+    <div class="grid md:grid-cols-3 gap-6">
+
+      <!-- CARD -->
+      <div class="glass p-6 rounded-xl hover-card">
+        <h3 class="text-lg mb-3">
+          Latest Market News
+        </h3>
+
+        <p class="text-gray-400 text-sm mb-6">
+          View real-time finance headlines, stocks, and economy updates.
+        </p>
+
+        <a href="https://finance.yahoo.com/" target="_blank"
+           class="block text-center bg-white/10 py-2 rounded-lg hover:bg-white/20">
+           Read on Yahoo →
+        </a>
+      </div>
+
+      <div class="glass p-6 rounded-xl hover-card">
+        <h3 class="text-lg mb-3">
+          Stock Market Updates
+        </h3>
+
+        <p class="text-gray-400 text-sm mb-6">
+          Earnings, stock movers, and investor news.
+        </p>
+
+        <a href="https://finance.yahoo.com/topic/stock-market-news/" target="_blank"
+           class="block text-center bg-white/10 py-2 rounded-lg hover:bg-white/20">
+           View Stocks →
+        </a>
+      </div>
+
+      <div class="glass p-6 rounded-xl hover-card">
+        <h3 class="text-lg mb-3">
+          Economic News
+        </h3>
+
+        <p class="text-gray-400 text-sm mb-6">
+          Inflation, interest rates, and macro updates.
+        </p>
+
+        <a href="https://finance.yahoo.com/topic/economic-news/" target="_blank"
+           class="block text-center bg-white/10 py-2 rounded-lg hover:bg-white/20">
+           Read Economy →
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- TRADINGVIEW -->
+<section id="markets" class="max-w-7xl mx-auto px-6 py-20">
+  <h2 class="text-2xl mb-6">Live Markets</h2>
+
+  <div class="glass p-4 rounded-xl">
+    <div id="tradingview-widget" style="height:500px;"></div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="border-t border-white/10 py-10 text-center text-gray-500 text-sm">
+  © Miami Signal
+</footer>
+
+<!-- TRADINGVIEW SCRIPT -->
+<script>
+const script = document.createElement("script");
+script.src = "https://s3.tradingview.com/tv.js";
+script.onload = () => {
+  new TradingView.widget({
+    container_id: "tradingview-widget",
+    width: "100%",
+    height: 500,
+    symbol: "NASDAQ:AAPL",
+    theme: "dark",
+    style: "1"
+  });
+};
+document.body.appendChild(script);
 </script>
+
+</body>
+</html>
