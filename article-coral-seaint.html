@@ -8,10 +8,7 @@
   <script src="https://cdn.tailwindcss.com"></script>
 
   <style>
-    body {
-      background: #050505;
-      color: white;
-    }
+    body { background:#050505; color:white; }
 
     .glass {
       background: rgba(255,255,255,0.05);
@@ -20,17 +17,59 @@
     }
 
     .article p {
-      color: #d4d4d4;
-      line-height: 1.9;
-      margin-bottom: 1.4rem;
-      font-size: 1.05rem;
+      color:#d4d4d4;
+      line-height:1.95;
+      margin-bottom:1.45rem;
+      font-size:1.06rem;
     }
 
     .article h2 {
-      font-size: 1.7rem;
-      font-weight: 700;
-      margin-top: 2.5rem;
-      margin-bottom: 1rem;
+      font-size:1.75rem;
+      font-weight:700;
+      margin-top:2.7rem;
+      margin-bottom:1rem;
+      color:white;
+    }
+
+    .news-image {
+      filter: blur(0.9px) brightness(0.96) contrast(0.98);
+      transform: scale(1.006);
+    }
+
+    .quote {
+      border-left: 3px solid rgba(56,189,248,0.9);
+      padding-left: 1.2rem;
+      color: #f5f5f5 !important;
+      font-size: 1.25rem !important;
+      line-height: 1.8 !important;
+      margin: 2rem 0;
+    }
+
+    #google_translate_element select {
+      background:#0b0b0b;
+      color:white;
+      border:1px solid rgba(255,255,255,0.15);
+      border-radius:999px;
+      padding:8px 12px;
+      font-size:12px;
+    }
+
+    .goog-logo-link,
+    .goog-te-gadget span {
+      display:none !important;
+    }
+
+    .goog-te-gadget {
+      color:transparent !important;
+      font-size:0 !important;
+    }
+
+    body {
+      top:0 !important;
+    }
+
+    .skiptranslate iframe {
+      display:none !important;
     }
   </style>
 </head>
@@ -39,10 +78,12 @@
 
   <!-- NAV -->
   <nav class="border-b border-white/10 bg-black/80 backdrop-blur-xl sticky top-0 z-50">
-    <div class="max-w-6xl mx-auto px-5 py-5 flex justify-between items-center">
+    <div class="max-w-6xl mx-auto px-5 py-5 flex justify-between items-center gap-4">
       <a href="index.html" class="font-bold uppercase tracking-wide">
         Miami Finance News
       </a>
+
+      <div id="google_translate_element"></div>
     </div>
   </nav>
 
@@ -59,120 +100,169 @@
     <p class="text-gray-400 mt-5 max-w-3xl text-lg">
       A full team took the win. A solo builder left the strongest impression.
     </p>
+
+    <div class="flex flex-wrap gap-3 mt-6 text-sm text-gray-500">
+      <span>By Miami Finance News</span>
+      <span>•</span>
+      <span>Miami, FL</span>
+      <span>•</span>
+      <span>Founder Event Coverage</span>
+    </div>
   </header>
 
   <!-- IMAGE -->
   <section class="max-w-6xl mx-auto px-5 relative">
-    
     <div class="rounded-2xl overflow-hidden border border-white/10 shadow-2xl relative">
-      
-      <!-- CLEAN IMAGE (NO BLUR) -->
       <img 
         src="assets/IMG_8855.jpeg" 
-        class="w-full h-auto object-cover"
+        class="w-full h-auto object-cover news-image"
+        alt="AZUL Private Founder Event"
       />
 
-      <!-- watermark -->
       <div class="absolute top-4 right-4 text-right text-xs text-white/80">
         <div class="font-semibold">Miami Finance News</div>
         <div class="text-white/60">miamifinances.business</div>
       </div>
-
     </div>
 
+    <p class="text-xs text-gray-500 mt-3">
+      Photo: Miami Finance News / AZUL Private Founder Event
+    </p>
   </section>
 
   <!-- ARTICLE -->
   <main class="max-w-3xl mx-auto px-5 py-12 article">
 
     <p>
-      Under deep blue stage lights, the AZUL Private Founder Event brought together some of the most competitive early-stage companies in the room.
+      Under deep blue stage lights, inside a room filled with founders, investors, and operators, the AZUL Private Founder Event delivered more than a competition. It delivered a moment.
     </p>
 
     <p>
-      Coral was announced as the winner — backed by a full team, strong execution, and a clear, coordinated presence.
+      The kind of moment where the winner is announced, the room reacts, and everyone immediately understands what victory looks like. Coral had the team, the energy, the preparation, and the presence. When their name was called, they celebrated like a company that had earned it.
+    </p>
+
+    <p>
+      But across the stage, another story was unfolding quietly.
     </p>
 
     <h2>Coral Takes the Win</h2>
 
     <p>
-      As their name was called, the team erupted into celebration. Years of effort, preparation, and alignment paid off in a single moment.
+      Coral walked into the room with the strength of a full company behind them. Their team stood together, moved together, and celebrated together. In a founder event built around execution, Coral represented structure, alignment, and momentum.
     </p>
 
     <p>
-      They looked like what a winning company is expected to look like: structured, prepared, complete.
-    </p>
-
-    <h2>But Something Else Stood Out</h2>
-
-    <p>
-      On the opposite side of the stage stood a single figure — SEAINT.
+      Their win made sense. They looked prepared. They looked coordinated. They looked like a company that had already built the internal trust needed to compete at a high level.
     </p>
 
     <p>
-      No team. No group energy. Just one operator competing at the same level.
+      When the announcement came, their celebration filled the stage. The applause, the smiles, the energy — it was the picture of a team reaching a milestone together.
+    </p>
+
+    <h2>But SEAINT Created the Contrast</h2>
+
+    <p>
+      On the other side of that celebration stood SEAINT.
     </p>
 
     <p>
-      That contrast shifted the room.
+      Not a department. Not a crowd. Not a group of operators standing shoulder to shoulder.
+    </p>
+
+    <p>
+      One founder.
+    </p>
+
+    <p>
+      And that contrast became impossible to ignore.
+    </p>
+
+    <p class="quote">
+      Coral showed what a strong team can accomplish. SEAINT showed what one builder can carry when the vision is heavy enough.
+    </p>
+
+    <p>
+      In a room where most companies arrived with visible support, SEAINT stood as a reminder that leverage is changing. Technology, automation, systems, and conviction are allowing smaller teams — sometimes even one person — to compete in rooms that used to require entire departments.
+    </p>
+
+    <h2>The Weight of Building Alone</h2>
+
+    <p>
+      There is a side of entrepreneurship that does not always appear on stage.
+    </p>
+
+    <p>
+      The late nights. The silent rebuilds. The moments when there is no team to look at, no one to blame, and no one to carry the pressure with you.
+    </p>
+
+    <p>
+      For SEAINT, the story was not about losing. It was about standing in the room anyway. It was about showing up beside companies with full teams and proving that the work was serious enough to belong there.
+    </p>
+
+    <p>
+      That is what made the image powerful. Coral celebrated as winners. SEAINT stood apart, but not defeated. The posture told a different story — one of reflection, pressure, and a founder still processing the cost of building something bigger than himself.
+    </p>
+
+    <h2>Less May Be More</h2>
+
+    <p>
+      Modern companies are no longer judged only by how many people stand behind them. Increasingly, they are judged by how much they can build, how fast they can move, and how intelligently they can operate.
+    </p>
+
+    <p>
+      SEAINT’s presence raised a question that stayed in the room after the announcement:
+    </p>
+
+    <p>
+      What happens when one operator builds with the leverage of an entire system?
+    </p>
+
+    <p>
+      Coral earned the win. SEAINT earned attention.
+    </p>
+
+    <p>
+      And sometimes, in rooms like this, attention is where the next chapter begins.
     </p>
 
     <h2>The Real Story</h2>
 
     <p>
-      Coral won the event. But SEAINT raised a different question entirely:
+      The official result was clear. Coral won the event.
     </p>
 
     <p>
-      What happens when one person builds with the leverage of an entire system?
+      But the emotional result was more complicated.
     </p>
 
     <p>
-      At AZUL, the winners were clear.  
-      But the impression left behind may belong to something still being built.
-    </p>
-
-    <!-- 🔥 SPANISH SECTION -->
-    <h2 class="mt-10">Versión en Español</h2>
-
-    <p>
-      Bajo luces azules intensas, el evento privado de fundadores de AZUL reunió a algunas de las empresas más competitivas en una sola sala.
+      Because while one company celebrated with twenty-two people on stage, another founder stood alone — and still made people look twice.
     </p>
 
     <p>
-      Coral fue anunciada como la empresa ganadora — respaldada por un equipo completo, ejecución sólida y una presencia bien coordinada.
-    </p>
-
-    <p>
-      Mientras celebraban juntos, demostraban lo que parece una compañía lista para escalar: organizada, preparada y alineada.
-    </p>
-
-    <p>
-      Pero al otro lado del escenario, algo distinto llamó la atención.
-    </p>
-
-    <p>
-      SEAINT no tenía equipo visible. No tenía respaldo en el escenario. Solo una persona.
-    </p>
-
-    <p>
-      Y aun así, estaba compitiendo al mismo nivel.
-    </p>
-
-    <p>
-      Ese contraste cambió la percepción dentro del cuarto.
-    </p>
-
-    <p>
-      Coral ganó la noche.  
-      Pero SEAINT dejó una pregunta más profunda:
-    </p>
-
-    <p>
-      ¿Qué pasa cuando una sola persona construye con la fuerza de un sistema completo?
+      At AZUL, Coral won the night. But SEAINT changed the room.
     </p>
 
   </main>
+
+  <!-- GOOGLE TRANSLATE -->
+  <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement(
+        {
+          pageLanguage: 'en',
+          includedLanguages: 'es,en',
+          layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+        },
+        'google_translate_element'
+      );
+    }
+  </script>
+
+  <script 
+    type="text/javascript" 
+    src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+  </script>
 
 </body>
 </html>
